@@ -1,19 +1,21 @@
-import { View, Text, StyleSheet } from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
 
-export default function Footer() {
+export default function Footer(){
     return (
-        <View Style = {StyleSheet.Footer}>
-            <Text>Footer</Text>
+        <View style={styles.footer}>
+          <Text style={styles.copy}>Copyright © 2024 Renan Cavichi </Text>
         </View>
     )
 }
 
-const styles = StyleSheet.create ({
-    Footer: {
-        flex: 2,
-        backgroundColor: "#4169E1",
-        justifyContent: 'center' ,
+const styles = StyleSheet.create({
+    footer: {
+        padding: 25,
+        //backgroundColor: "#998560",
+        justifyContent: 'center',
         alignItems: 'center',
+    },
+    copy: {
+        color: "#BBBBBB"
     }
-
 })

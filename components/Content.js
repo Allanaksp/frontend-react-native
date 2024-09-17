@@ -1,19 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
+import CardAccount from './CardAccount'
 
-export  default function Content() {
+export default function Content(){
     return (
-        <View Style = {StyleSheet.Content}>
-            <Text>Footer</Text>
+        <View style={styles.content}>
+
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+          <CardAccount />
+
         </View>
     )
 }
 
-
-const styles = StyleSheet.create ({
-    Content: {
-        flex: 5,
-        backgroundColor: "#545656",
-        justifyContent: 'center' ,
-        alignItems: 'center',
-    }
+const styles = StyleSheet.create({
+    content: {
+        gap: 10,
+        //backgroundColor: "#545656",
+        padding: 15
+        //justifyContent: 'center',
+        //alignItems: 'center'
+      }
 })

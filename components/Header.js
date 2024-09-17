@@ -1,51 +1,46 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet} from 'react-native'
 import { Image } from 'expo-image'
+import Ionicons from '@expo/vector-icons/Ionicons'
 
-export default function Header() {
+export default function Header(){
     return (
-        <View Style = {Styles.header}>
+        <View style={styles.header}>
             <View style={styles.user}>
-            <image  
-                style={styles.avatar}
-                source="https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+                <Image 
+                    style={styles.avatar}
+                    source={require('../assets/avatar-renan.jpg')} //Local
+                    //source="https://avatars.githubusercontent.com/u/4259630?v=4"
                 />
-                <text>Allana Santos</text>
-                </View>
-                <cgMenu style={styles.menu} />
+                <Text style={styles.name}>Allana Santos</Text>
+            </View>
+            <Ionicons style={styles.menu} name="menu" size={24} color="black" />
         </View>
     )
 }
 
-const styles = StyleSheet.create ({
-    Header: {
-        flex: 1,
-        //backgroundColor: "#6A5ACD",
-        justifyContent: 'center' ,
+const styles = StyleSheet.create({
+    header: {
+        //backgroundColor: "#899986",
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingHorizontal: 15
+        padding: 15,
     },
-    
-    user:{
-        flexDirection:'row',
+    user: {
+        flexDirection: 'row',
         alignItems: 'center',
-        gap: 10,
+        gap: 10
     },
-
     avatar: {
-        width:80,
-        height:50,
-        borderRadius: 25,
+        width: 50,
+        height: 50,
+        borderRadius: 25
     },
-
     name: {
         fontWeight: '600',
         fontSize: 18
     },
     menu: {
-        width: 25,
-        height: 25,
         padding: 10
     }
 })
